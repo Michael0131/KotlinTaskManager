@@ -115,7 +115,6 @@ fun markTaskAsCompleted(tasks: MutableMap<Int, Task>) {
 
 // Function to filter tasks by their category
 fun filterTasksByCategory(tasks: Map<Int, Task>) {
-    clearConsole() // Clear the console for better readability
     print("Enter category to filter by: ")
     val category = readLine() ?: "" // Read the category input
     // Filter tasks matching the input category (case-insensitive)
@@ -123,6 +122,7 @@ fun filterTasksByCategory(tasks: Map<Int, Task>) {
     if (filteredTasks.isEmpty()) {
         println("No tasks found in category '$category'.") // Handle no matches
     } else {
+        clearConsole() // Clear the console for better input visibility
         println("\n=== Tasks in '$category' ===")
         // Display tasks in the specified category
         filteredTasks.forEach {
