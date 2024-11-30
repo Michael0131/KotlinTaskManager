@@ -71,6 +71,7 @@ fun addTask(tasks: MutableMap<Int, Task>, id: Int) {
     // Add the new task to the collection
     tasks[id] = Task(id, name, description, deadline, category)
     println("Task added successfully!")
+    Thread.sleep(2000) // Pause to allow the user to read the message
 }
 
 // Function to remove a task by its ID
@@ -83,6 +84,8 @@ fun removeTask(tasks: MutableMap<Int, Task>) {
     } else {
         println("Task with ID $id not found.") // Handle invalid or non-existent ID
     }
+    Thread.sleep(2000) // Pause to allow the user to read the message
+    
 }
 
 // Function to list all tasks
@@ -97,6 +100,7 @@ fun listTasks(tasks: Map<Int, Task>) {
             println("ID: ${it.id}, Name: ${it.name}, Description: ${it.description}, Deadline: ${it.deadline}, Category: ${it.category}, Status: ${it.status}")
         }
     }
+    Thread.sleep(4000) // Pause to allow the user to read the message
 }
 
 // Function to mark a task as completed by its ID
@@ -111,6 +115,7 @@ fun markTaskAsCompleted(tasks: MutableMap<Int, Task>) {
     } else {
         println("Task with ID $id not found.") // Handle invalid or non-existent ID
     }
+    Thread.sleep(2000) // Pause to allow the user to read the message
 }
 
 // Function to filter tasks by their category
@@ -129,6 +134,7 @@ fun filterTasksByCategory(tasks: Map<Int, Task>) {
             println("ID: ${it.id}, Name: ${it.name}, Description: ${it.description}, Deadline: ${it.deadline}, Status: ${it.status}")
         }
     }
+    Thread.sleep(2000) // Pause to allow the user to read the message
 }
 
 // Function to save tasks to a plain text file
@@ -140,6 +146,7 @@ fun saveTasksToFile(tasks: Map<Int, Task>, fileName: String = "tasks.txt") {
     // Write the string to the specified file
     java.io.File(fileName).writeText(fileContent)
     println("Tasks saved to $fileName.") // Confirm save
+    Thread.sleep(2000) // Pause to allow the user to read the message
 }
 
 // Function to load tasks from a plain text file
@@ -166,5 +173,6 @@ fun loadTasksFromFile(fileName: String = "tasks.txt"): MutableMap<Int, Task> {
             }
         }
     }
+    Thread.sleep(2000) // Pause to allow the user to read the message
     return tasks // Return the loaded tasks
 }
