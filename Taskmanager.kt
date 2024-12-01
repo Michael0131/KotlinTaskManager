@@ -29,7 +29,7 @@ fun main() {
     // Main program loop
     while (true) {
         clearConsole() // Clear the console before displaying the menu
-        // Display the main menu
+        // Display the main menu=
         println("\n=== Task Manager ===")
         println("1. Add Task")
         println("2. Remove Task")
@@ -176,3 +176,4 @@ fun loadTasksFromFile(fileName: String = "tasks.txt"): MutableMap<Int, Task> {
     Thread.sleep(2000) // Pause to allow the user to read the message
     return tasks // Return the loaded tasks
 }
+=
